@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+# shere-app
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
+<<<<<<< HEAD
 # shere_app
 =======
 # shere_app
@@ -25,4 +31,8 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 >>>>>>> shere_app
 =======
 # shere-app
+>>>>>>> origin/master
+<<<<<<< HEAD
+=======
+>>>>>>> shere-app
 >>>>>>> origin/master
