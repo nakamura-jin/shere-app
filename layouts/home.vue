@@ -30,4 +30,9 @@
   .logo {
     width: 250px;
   }
+
+
+
+  /* sp版 */
+  
 </style>

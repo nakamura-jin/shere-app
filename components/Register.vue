@@ -1,10 +1,10 @@
 <template>
   <div class="register">
     <h2>新規登録</h2>
-    <form>
-      <input type="text" name="name" v-model="newName" placeholder="ユーザーネーム">
-      <input type="email" name="e-mail" v-model="newEmail" placeholder="メールアドレス">
-      <input type="password" name="password" v-model="newPassword" placeholder="パスワード">
+    <form class="create-user__form">
+      <input type="text" name="name" class="create-user__name" v-model="newName" placeholder="ユーザーネーム">
+      <input type="email" name="e-mail" class="create-user__email" v-model="newEmail" placeholder="メールアドレス">
+      <input type="password" name="password" class="create-user__password" v-model="newPassword" placeholder="パスワード">
     </form>
     <button @click="register">新規登録</button>
   </div>
@@ -65,7 +65,8 @@ export default {
 
 <style>
   .register {
-    width: 400px;
+    width: 30%;
+    height: 50%;
     text-align: center;
     background: white;
     border-radius: 10px;
@@ -78,18 +79,26 @@ export default {
     text-align: center;
     margin: 10px 0;
   }
-  input {
+  .create-user__form {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .create-user__name,
+  .create-user__email,
+  .create-user__password {
     display: flex;
-    width: 350px;
+    width: 100%;
     margin: 10px auto;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #222;
     border-radius: 5px;
   }
-  input:not(:first-of-type) {
-    margin-top: 20px;
+  .create-user__name {
+    margin-top: 40px;
   }
+
   button {
     width: 150px;
     margin: 10px auto;
@@ -99,5 +108,21 @@ export default {
     font-weight: bold;
     color: white;
     border: none;
+  }
+
+
+
+
+
+
+  /* sp版 */
+  @media screen and (max-width:480px) {
+    .register {
+      width: 90%;
+      height: 54%;
+    }
+    .create-user__name {
+      margin-top: 20px;
+    }
   }
 </style>

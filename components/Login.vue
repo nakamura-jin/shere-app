@@ -2,8 +2,8 @@
   <div class="login">
     <h2>ログイン</h2>
     <form>
-      <input type="email" name="e-mail" v-model="Email" placeholder="メールアドレス">
-      <input type="password" name="password" v-model="Password" placeholder="パスワード">
+      <input type="email" class="login__user-email" name="e-mail" v-model="Email" placeholder="メールアドレス">
+      <input type="password" class="login__user-password" name="password" v-model="Password" placeholder="パスワード">
     </form>
     <button @click="login">ログイン</button>
   </div>
@@ -83,7 +83,8 @@ export default {
     text-align: center;
     margin: 10px 0;
   }
-  input {
+  .login__user-email,
+  .login__user-password {
     display: flex;
     width: 350px;
     margin: 10px auto;
@@ -92,7 +93,7 @@ export default {
     border: 1px solid #222;
     border-radius: 5px;
   }
-  input:not(:first-of-type) {
+  .login__user-email {
     margin-top: 20px;
   }
   button {
@@ -104,5 +105,18 @@ export default {
     font-weight: bold;
     color: white;
     border: none;
+  }
+
+
+  /* sp版 */
+  @media screen and (max-width:480px) {
+    .login {
+      width: 90%;
+      height: 44%;
+    }
+    .login__user-email,
+    .login__user-password {
+      width: 90%;
+    }
   }
 </style>
