@@ -31,8 +31,7 @@ export default {
       .auth()
       .signInWithEmailAndPassword(this.Email, this.Password)
       .then(() => {
-        // axios.get('http://127.0.0.1:8000/api/v1/users/user/' + this.Email)
-        axios.get('https://shere-app-api.herokuapp.com/' + this.Email)
+        axios.get('http://127.0.0.1:8000/api/v1/users/user/' + this.Email)
         .then((response) => {
           let tUser = response.data.data
           console.log(tUser)
